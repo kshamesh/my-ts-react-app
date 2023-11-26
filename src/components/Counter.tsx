@@ -1,7 +1,7 @@
 // TypeScript Code
 import React, { useState } from "react";
 
-function Counter() {
+export function Counter() {
   const [count, setCount] = useState<number>(0); // Type-safe state
 
   const increment = () => setCount(count + 1);
@@ -9,13 +9,9 @@ function Counter() {
 
   return (
     <div>
-      <p>Count: {count}</p>
+      <h1>Count: {count}</h1>
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
     </div>
   );
-}
-
-function App() {
-  return <Counter />;
 }
